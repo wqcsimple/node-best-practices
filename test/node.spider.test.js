@@ -17,7 +17,7 @@ var fs = require('fs');
 charset(superAgent);                    // 加载编码
 superagentRetry(superAgent);            // 重复请求
 
-var filePath = __dirname + '/../spider_file/spider_content.txt';
+var filePath = __dirname + '/../spider-file/spider-content.txt';
 
 var url = "http://whis.wang";
 superAgent.post(url).charset('utf8') //指定编码
