@@ -1,0 +1,21 @@
+{
+            "configFileName": ".watch_config",
+            "basePath":"/Users/whis/Workspace/whis/node-person-experience/",
+            "uploadType": "",
+            "watchPath":"",
+            "recordFileName":".record",
+            "oss":{"region":"","accessKeyId":"","accessKeySecret":"","bucket":""},
+            "ignores":[
+                ".record",
+                ".gitignore",
+                ".upOssConfig",
+                ".watch_config",
+                "node_modules/",
+                "_assets/",
+                "conf/",
+                "workspace.xml",
+                ".idea/",
+                ".git/"
+            ],
+            "autoSave":10
+            }
