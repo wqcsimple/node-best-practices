@@ -42,7 +42,7 @@ _watchPath = process.argv[1] ? process.argv[1] : './';
 /**
  * 启动监测程序,把监测到改变了的文件路劲写入记录文件
  *
- * _changedRecordsArray记录更改的文件,当记录的数量>=10个的时候,写入记录文件,以减少写入操作
+ * _changedRecordsArray 记录更改的文件,当记录的数量>=10个的时候,写入记录文件,以减少写入操作
  * _intervalLoop 辅助监测写入文件,如果更改记录没有达到100次, 辅助监测程序会在20秒之后把记录存入记录文件
  */
 function startWatchProgram() {
@@ -289,5 +289,14 @@ getConfig.findConfigJsonFile((config) => {
     _recordFilePath = _rootPath + config.recordFileName;
     _ignoreFilesNameArray = config.ignores;
     _autoSave = parseInt(config.autoSave);
+
+    // 每次启动检测记录文件是否已经创建，如果已经创建就删除
+    fs.exists(_recordFilePath, (exists) => {
+        fs.unlink(_recordFilePath, (err) => {
+            if (err) throw err;
+            console.log('successfully deleted' + _recordFilePath);
+        });
+    });
+
     getIgnoreFiles(startWatchProgram);
 });
