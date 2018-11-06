@@ -44,3 +44,7 @@ function get() {
 
 # TCP连接
 `test/tcp/*`
+
+# Puppeteer
+调用chrome浏览器的API
+1. 一般用于打开指定页面然后进行截屏生成图像，或者生成pdf
