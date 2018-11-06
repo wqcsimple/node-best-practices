@@ -28,7 +28,7 @@
     "locutus": "^2.0.8",
     "log4js": "^1.1.0",
     "mysql": "^2.12.0",
-    "node-api-base": "git@github.com:zdix/node-api-best-practice.git",
+    "node-api-base": "git@github.com:wqcsimple/node-api-base.git",
     "node-watch": "^0.4.1",
     "puppeteer": "^1.10.0",
     "watchr": "^3.0.1",
