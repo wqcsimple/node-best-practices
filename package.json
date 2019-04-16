@@ -14,7 +14,7 @@
     "ejs": "^2.5.2",
     "express": "^4.14.0",
     "ioredis": "^2.4.0",
-    "knex": "^0.12.6",
+    "knex": "^0.16.5",
     "node-xlsx": "^0.7.4",
     "redis": "^2.6.3",
     "socket.io": "^1.5.0",
@@ -23,14 +23,14 @@
     "superagent-retry": "^0.6.0"
   },
   "dependencies": {
-    "amqplib": "^0.5.2",
+    "amqplib": "^0.5.3",
     "glob-plus": "0.0.2",
-    "locutus": "^2.0.8",
-    "log4js": "^1.1.0",
-    "mysql": "^2.12.0",
+    "locutus": "^2.0.10",
+    "log4js": "^4.1.0",
+    "mysql": "^2.16.0",
     "node-api-base": "git@github.com:wqcsimple/node-api-base.git",
     "node-watch": "^0.4.1",
-    "puppeteer": "^1.10.0",
+    "puppeteer": "^1.14.0",
     "watchr": "^3.0.1",
     "wechaty": "^0.8.6"
   }

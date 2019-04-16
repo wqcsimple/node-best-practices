@@ -4,22 +4,10 @@
  */
 const fs = require('fs');
 const getConfig = require('./config.js');
-const log4js = require('log4js');
+const logger = require('../../lib/logger');
 const glob = require('glob-plus');
 const watch = require('node-watch');
 const watcher = require('watchr');
-
-//  日志配置
-log4js.configure({
-    appenders: [{
-        type: 'console',
-        layout: {
-            pattern: '[%r] [%p][%c] - %m%n'
-        }
-    }]
-});
-
-let log = log4js.getLogger();
 
 let _rootPath = '/';
 let _relativePath = '';
@@ -192,9 +180,9 @@ function writeRecordFile(record, recordFilePath, mode, callback) {
     fs.appendFile(recordFilePath, record, 'utf8', function (err) {
         if (err) {
             console.log('==== 记录写入文件失败 ====');
-            log.error(err);
+            logger.error(err);
         }
-        log.trace('---- 记录写入文件成功 ----');
+        logger.trace('---- 记录写入文件成功 ----');
         if (callback) {
             callback();
         }
@@ -213,7 +201,7 @@ function readRecordFile(recordFilePath, mode, callback) {
     checkFileExists(recordFilePath, '/** 此文件为文件变化监测记录,请勿删除 **/', 'utf8');
     let _mode = mode ? mode : 'utf8';
     fs.readFile(recordFilePath, _mode, function (err, data) {
-        if (err) log.error(err);
+        if (err) logger.error(err);
         let recordsArray = data.split('\n');
         _recordsArray = recordsArray;
         if (callback)
