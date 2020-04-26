@@ -10,15 +10,16 @@ const iPhoneX = devices['iPhone X'];
     const browser = await puppeteer.launch();
     const page = await browser.newPage();
     // await page.goto('https://whis.wang', {waitUntil: 'networkidle0'});
-    await page.goto("https://mp.weixin.qq.com/s/yczs33nb6imZZMzTZWFZhA",
-        {waitUntil: ['networkidle0']});
+    await page.goto('https://baidu.com', {waitUntil: 'networkidle0'});
+    // await page.goto("https://mp.weixin.qq.com/s/yczs33nb6imZZMzTZWFZhA",
+    //     {waitUntil: ['networkidle0']});
     // await page.goto("https://mp.weixin.qq.com/s/yczs33nb6imZZMzTZWFZhA");
     // await page.emulate(iPhoneX);
 
-    // await page.screenshot({
-    //     path: 'screenshot.png',
-    //     fullPage: true,
-    // });
+    await page.screenshot({
+        path: 'screenshot.png',
+        fullPage: true,
+    });
 
     //调用evaluate 方法返回id 为form元素的位置信息
     // let clip = await page.evaluate(() => {
