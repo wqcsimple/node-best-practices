@@ -26,7 +26,7 @@
   "dependencies": {
     "amqplib": "^0.5.5",
     "glob-plus": "0.0.2",
-    "locutus": "^2.0.11",
+    "locutus": "^2.0.12",
     "log4js": "^4.1.0",
     "mysql": "^2.18.1",
     "node-api-base": "git+ssh://git@github.com/wqcsimple/node-api-base.git",
